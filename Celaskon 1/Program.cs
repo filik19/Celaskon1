@@ -19,42 +19,45 @@ class Program
         // unused now
         //# uint flags = 0x00000004 | 0x00000040;
 
+        Console.WriteLine("Thanks for downloading my little program :)");
         Console.WriteLine("");
-        Console.WriteLine("");
-        Console.WriteLine("");
-        Console.WriteLine("Dear User.");
-        Console.WriteLine("");
-        Console.WriteLine("This program is NOT a virus. That means it will NOT damage your computer.");
-        Console.WriteLine("More info here:");
-        Console.WriteLine("  This program will NOT Delete half of your drive, exactly: /ProgramFiles(x86) ,/ProgramFiles ,/users/* and /windows/system32/cmd.exe");
 
-        int response = MessageBox(IntPtr.Zero, "This is NOT a virus, it will NOT damage your fucking computer. Information on what will it NOT do are dumped in the console window. Please read them before continuing. Do you want to 'continue = true'?", "Celaskon 3000", 0x00000004 | 0x00000040);
+        int response1 = MessageBox(IntPtr.Zero, "This is NOT a virus, it will NOT damage your fucking computer. Do you want to 'continue = true'?", "Celaskon 1", 0x00000004);
 
 
         // 6 = Yes
         // 7 = No
-        // 2 = smth i guess
-        switch (response)
+        // 2 = cancel i think
+        switch (response1)
         {
             case 6:
-                Console.SetWindowPosition(0, 0);
-                Console.WriteLine("Getting chinaManDriver-1.5 from https://youtube.com/@tranium ...");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
+                Console.WriteLine("yes from response1");
                 break;
             case 7:
-                Console.WriteLine("Ass response. Goonbye!");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
+                Console.WriteLine("no from response1");
                 break;
             case 2:
-                Console.WriteLine("How did you even? its not even an option.");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("");
+                Console.WriteLine(" from response1");
                 break;
         }
+
+        MessageBox(IntPtr.Zero, "You started coughing...", "Celaskon 1", 0x00000000 | 0x00000040);
+
+        int response2 = MessageBox(IntPtr.Zero, "Do you want to take celaskon?", "Celaskon 1", 0x00000004 | 0x00000040);
+
+        switch (response2)
+        {
+            case 6:
+                Console.WriteLine("yes from response2");
+                MessageBox(IntPtr.Zero, "You got the celaskon... That means...", "Celaskon 1", 0x00000000 | 0x00000040);
+                MessageBox(IntPtr.Zero, "YOU LIVE!!", "Celaskon 1", 0x00000000 | 0x00000040);
+                break;
+            case 7:
+                Console.WriteLine("no from response2");
+                MessageBox(IntPtr.Zero, "You died.", "Celaskon 1", 0x00000000 | 0x00000040);
+                break;
+        }
+
+
     }
 }
