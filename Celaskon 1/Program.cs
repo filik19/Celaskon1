@@ -14,7 +14,7 @@ class Program
 
     static void Main()
     {
-        Console.WriteLine("If you see this, user32.dll was successfully imported. Yay");
+        Console.WriteLine("user32.dll was imported successfully");
 
         // unused now
         //# uint flags = 0x00000004 | 0x00000040;
@@ -53,8 +53,6 @@ class Program
                 Console.WriteLine("comfirmed info2");
                 MessageBox(IntPtr.Zero, "YOU LIVE!!", "Celaskon 1", 0x00000000 | 0x00000040);
                 Console.WriteLine("comfirmed info3");
-                Console.WriteLine("Quitting with code 0");
-                Environment.Exit(0);
                 break;
             case 7:
                 Console.WriteLine("no from response2");
